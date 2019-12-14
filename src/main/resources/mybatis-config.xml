@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd"> <!-- mybatis-3-config.dtd에 주목 -->
+<configuration>
+    <!-- package type alias -->
+    <typeAliases>
+        <package name="com.seongheon.demo"/>
+    </typeAliases>
+    <!--<typeAliases>
+        <typeAlias type="me.whiteship.springbootjdbc.AteamVO" alias="AteamVO"/>
+        &lt;!&ndash;<typeAlias type="com.sosohanya.leveldiary.diary.Diary" alias="Diary"/>&ndash;&gt;
+    </typeAliases>-->
+    <!-- 매핑정보 추가 -->
+    <mappers>
+        <mapper resource="mybatis/CompanyInfoMapper.xml" />
+    </mappers>
+</configuration>
