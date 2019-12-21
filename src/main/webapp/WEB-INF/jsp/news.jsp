@@ -13,20 +13,6 @@
     <title>기업별 뉴스</title>
 </head>
 <body>
-    <%--<table border="2">
-        <tbody id="company">
-            <tr id="samsung">
-                <td>삼성</td>
-            </tr>
-            <tr id="hanwha">
-                <td>한화</td>
-            </tr>
-            <tr id="lg">
-                <td>LG</td>
-            </tr>
-        </tbody>
-    </table>--%>
-
 
     <table border="2">
         <c:forEach items="${companyList}" var="list" varStatus="status">
@@ -37,6 +23,10 @@
     </table>
 
     <textarea id="res" rows="30" cols="100"></textarea>
+
+    <div>
+        <p>기업</p>
+    </div>
 </body>
 <script>
     $('tr').click(function() {
