@@ -14,5 +14,6 @@
     <!-- 매핑정보 추가 -->
     <mappers>
         <mapper resource="mybatis/CompanyInfoMapper.xml" />
+        <mapper resource="mybatis/BoardMapper.xml" />
     </mappers>
 </configuration>

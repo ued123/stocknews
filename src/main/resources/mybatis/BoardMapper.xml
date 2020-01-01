@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- mybatis-3-mapper.dtd에 주목 -->
+<mapper namespace="Board">
+
+    <select id="PostList" resultType="Posts">
+        select * from posts
+ 	</select>
+
+    <select id="ShowPost" parameterType="int" resultType="Posts">
+        select idx,
+            subject,
+            content,
+            user_name,
+            views,
+            vote
+        FROM posts WHERE idx=#{idx}
+    </select>
+
+    <insert id="WritePost" parameterType="Posts">
+        INSERT INTO posts(subject,user_id,user_name,create_date) VALUES(#{contents},0,"ued_123",curdate());
+    </insert>
+
+    <update id="viewplus" parameterType="int">
+        UPDATE posts SET views = views + 1 WHERE idx = #{idx}
+    </update>
+
+</mapper>

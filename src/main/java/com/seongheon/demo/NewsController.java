@@ -31,5 +31,4 @@ public class NewsController {
         String result = NaverSearchApi.doSearch(name);
         return result;
     }
-
 }

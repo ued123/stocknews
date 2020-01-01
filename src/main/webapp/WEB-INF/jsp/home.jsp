@@ -5,18 +5,65 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+
+        div {
+            width: 100%;
+            height: 450px;
+            border: 1px solid #000;
+
+            text-align: center;
+        }
+
+        div.top_di {
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            padding: 30px;
+
+            background-color: #695B4E;
+        }
+
+        div.bottom_di {
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            padding: 50px;
+
+            background-color: #988F76;
+        }
+
+        div.board_div {
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            padding: 50px;
+
+            background-color: #988F76;
+        }
+
+    </style>
     <title>메인 홈</title>
 </head>
 <body>
-<h1>메인 화면에 오신것을 환영합니다.!</h1>
-<a id="news" href="#">뉴스 보러 가기</a>
+    <div id="main_di">
+        <div class="top_di">
+            <h1>메인 화면에 오신것을 환영합니다.!</h1>
+        </div>
+        <div class="bottom_di">
+            <a class="news" href="#">뉴스 보러 가기</a>
+        </div>
+        <div class="board_div">
+            <a class="board" href="#">게시판</a>
+        </div>
+    </div>
 
-<form name="frm" method="get" action="news"></form>
+<%--<form name="frm" method="get" action="news"></form>--%>
 
 </body>
 <script>
-    $('#news').click(function() {
-        frm.submit();
+    $('#main_di a').click(function() {
+        location.href=$(this).attr('class');
     });
 </script>
 </html>
